@@ -1,0 +1,21 @@
+{
+  "name": "hair-salon-backend",
+  "version": "1.0.0",
+  "description": "Hair Salon Booking System API",
+  "main": "src/index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "sqlite3": "^5.1.6",
+    "sqlite": "^5.0.1",
+    "cors": "^2.8.5",
+    "morgan": "^1.10.0",
+    "date-fns": "^2.30.0",
+    "express-validator": "^7.0.1",
+    "nodemon": "^3.0.1"
+  }
+}
