@@ -17,7 +17,7 @@ app.use(express.json());
 // Routes
 // app.use("/api/appointments", appointmentRoutes);
 app.use("/api/services", serviceRoutes);
-app.use("/api/stylists", stylistRoutes);
+// app.use("/api/stylists", stylistRoutes);
 
 // Initialize database and start server
 initializeDatabase().then(() => {
