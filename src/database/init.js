@@ -1,6 +1,6 @@
 import sqlite3 from "sqlite3";
 import { open } from "sqlite";
-// import { seedDatabase } from "./seed.js";
+import { seedDatabase } from "./seed.js";
 
 let db = null;
 
@@ -25,6 +25,11 @@ export async function initializeDatabase() {
         id INTEGER PRIMARY KEY AUTOINCREMENT,
         username TEXT NOT NULL,
         password TEXT NOT NULL,
+        email TEXT,
+        phone TEXT,
+        name TEXT,
+        last_name TEXT,
+        specialization TEXT,
         created_at DATETIME DEFAULT CURRENT_TIMESTAMP
       );
 
@@ -40,4 +45,5 @@ export async function initializeDatabase() {
         FOREIGN KEY (stylist_id) REFERENCES stylists(id)
       );
     `);
+    await seedDatabase(db);
 }
